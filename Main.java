@@ -1,32 +1,18 @@
-import java.util.Scanner;
+public class Main{
+    public static  void main(String[] args){
+Customer customer = new Customer("anukul", 1000,"anukul@email.com");
+    System.out.println(customer.getName());
+        System.out.println(customer.getCreditLimit());
+        System.out.println(customer.getEmail());
 
-public class Main {
-    public static void main (String[] args) {
-        int currentYear = 2026;
+        Customer secondCustomer = new Customer();
+        System.out.println(secondCustomer.getName());
+        System.out.println(secondCustomer.getCreditLimit());
+        System.out.println(secondCustomer.getEmail());
 
-        try {
-            System.out.println(getInputFromConsole(currentYear));
-        } catch (NullPointerException e) {
-
-            System.out.println(getInputFromScanner(currentYear));
-        }
-
-        public static String getInputFromScanner ( int currentYear){
-            return "";
-        }
-        public static String getInputFromConsole ( int currentYear){
-
-            return "";
-        }
+      Customer thirdCustomer =  new Customer("hoe",10000,"hoe@ninn.com");
+        System.out.println(thirdCustomer.getName());
+        System.out.println(thirdCustomer.getCreditLimit());
+        System.out.println(thirdCustomer.getEmail());
     }
-
-        public static String getInputFromScanner ( int currentYear){
-
-            Scanner sc = new Scanner(System.in);
-            System.out.println("hi,What's your name?");
-            String name = sc.nextLine();
-            System.out.println("Hi " + name + ",thanks for taking the course!");
-            return "";
-        }
-    }
-
+}
