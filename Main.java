@@ -1,38 +1,32 @@
+import java.util.Scanner;
+
 public class Main {
-    public static void main(String[] args) {
-        printInformation("hello world");
-        printInformation("");
-        printInformation("\t   \n");
+    public static void main (String[] args) {
+        int currentYear = 2026;
 
-        String helloWorld = "hello World";
-        System.out.printf("index of r = %d %n ", helloWorld.indexOf('r'));
-        System.out.printf("index of World = %d %n ", helloWorld.indexOf("World"));
+        try {
+            System.out.println(getInputFromConsole(currentYear));
+        } catch (NullPointerException e) {
 
-        System.out.printf("index of l = %d %n ", helloWorld.indexOf('l'));
-        System.out.printf("index of l = %d %n ", helloWorld.lastIndexOf('l'));
-
-
-        System.out.printf("index of l = %d %n ", helloWorld.indexOf('l'));
-        System.out.printf("index of l = %d %n ", helloWorld.lastIndexOf('l'));
-
-
-    }
-
-    public static void printInformation(String string) {
-        int length = string.length();
-
-        System.out.printf("Length = %d %n", length);
-
-        if (string.isEmpty()) {
-            System.out.println("String is empty");
-            return;
+            System.out.println(getInputFromScanner(currentYear));
         }
 
-        if (string.isBlank()) {
-            System.out.println("String is blank");
+        public static String getInputFromScanner ( int currentYear){
+            return "";
         }
+        public static String getInputFromConsole ( int currentYear){
 
-        System.out.printf("First char = %c %n", string.charAt(0));
-        System.out.printf("Last char = %c %n", string.charAt(length - 1));
+            return "";
+        }
     }
-}
+
+        public static String getInputFromScanner ( int currentYear){
+
+            Scanner sc = new Scanner(System.in);
+            System.out.println("hi,What's your name?");
+            String name = sc.nextLine();
+            System.out.println("Hi " + name + ",thanks for taking the course!");
+            return "";
+        }
+    }
+
