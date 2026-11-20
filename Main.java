@@ -1,32 +1,27 @@
-    public class Main {
-        public static void main(String[] args) {
-            int number = 4;
-            int count=0;
-            int oddCount=0;
-            while (number<= 20) {
-                number++;
-                if(!isEvenNumber(number)) {
-                    count++;
-                    if(count==5){
-                        break;
-                    }
-                    continue;
-                }
-                else {
-
-                    oddCount++;
-
-                }
-                System.out.println("Even numbers:" + number );
-            }System.out.println("total numbers of even numbers are:"+count);
-            System.out.println("total numbers of odd numbers are:"+oddCount);
-        }
-            public static boolean isEvenNumber ( int number){
-                if ((number % 2) == 0) {
-                    return true;
-                } else {
-                    return false;
+public class Main {
+    public static void main(String[] args){
+        int count = 0;
+        for (int i =10;i<=50;i++){
+            if(isPrime(i)){
+                System.out.println(" number"+ i + "is a prime number" );
+                count++;
+                if (count == 3){
+                    System.out.println("found 3 - exiting loop");
+                    break;
                 }
             }
         }
-
+        System.out.println(" total number of prime numbers between 10 amd 50 is "+ count );
+    }
+    public static  boolean isPrime(int wholeNumber){
+        if (wholeNumber <= 2){
+            return ( wholeNumber == 2);
+        }
+        for (int divisor = 2; divisor < wholeNumber;divisor++ ){
+          if(wholeNumber % divisor ==0) {
+              return false;
+          }
+        }
+        return true;
+    }
+}
