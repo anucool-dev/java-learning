@@ -1,13 +1,20 @@
-public  class Main {
-    public  static  void main (String[] args) {
-        Car car = new Car();
-        car.setMake("Tarzan");
-        car.setModel("2003");
-        car.setDoors(2);
-        car.setConvertible(true);
-        car.setColor("blue");
-        System.out.println("make = " + car.getMake());
-        System.out.println("model = " + car.getModel());
-        car.describeCar();
+
+public class Main {
+    public static void main(String[] args){
+        int count =0;
+        int sum =0;
+        for ( int i = 1; i<=1000;i++){
+            if(i%3==0 && i%5==0 ){
+                count++;
+                sum += i;
+                System.out.println("numbers divisible by 3 and 5: "+i);
+
+            }
+            if (count == 5){
+                break;
+            }
+        }
+        System.out.println("sum of numbers divisible by 3 and 5 is = "+sum);
     }
 }
+
